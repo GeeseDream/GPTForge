@@ -1,52 +1,47 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPTs Showcase</title>
-    <!-- 引入Bootstrap CSS -->
+    <title>GPT Showcase</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         :root {
-            --light-bg-color: #f6f8fa;
-            --light-text-color: #24292e;
-            --light-border-color: #e1e4e8;
-            --light-shadow: rgba(0, 0, 0, 0.1);
+            --border-color-light: #ddd;
+            --shadow-color-light: rgba(0,0,0,.1);
+            --card-background-light: #fff;
+            --text-color-light: #000;
 
-            --dark-bg-color: #0d1117;
-            --dark-text-color: #c9d1d9;
-            --dark-border-color: #30363d;
-            --dark-shadow: rgba(255, 255, 255, 0.1);
+            --border-color-dark: #30363d;
+            --shadow-color-dark: rgba(255,255,255,.1);
+            --card-background-dark: #161b22;
+            --text-color-dark: #c9d1d9;
         }
 
         [data-theme="light"] {
-            --bg-color: var(--light-bg-color);
-            --text-color: var(--light-text-color);
-            --border-color: var(--light-border-color);
-            --shadow: var(--light-shadow);
+            --border-color: var(--border-color-light);
+            --shadow-color: var(--shadow-color-light);
+            --card-background: var(--card-background-light);
+            --text-color: var(--text-color-light);
         }
 
         [data-theme="dark"] {
-            --bg-color: var(--dark-bg-color);
-            --text-color: var(--dark-text-color);
-            --border-color: var(--dark-border-color);
-            --shadow: var(--dark-shadow);
+            --border-color: var(--border-color-dark);
+            --shadow-color: var(--shadow-color-dark);
+            --card-background: var(--card-background-dark);
+            --text-color: var(--text-color-dark);
         }
 
         body {
-            background-color: var(--bg-color);
             color: var(--text-color);
+            background-color: var(--background-color);
         }
 
         .card {
-            border: 1px solid var(--border-color);
-            box-shadow: 0 2px 5px var(--shadow);
             cursor: pointer;
-            transition: transform 0.2s; /* Animation */
-        }
-
-        .card:hover {
-            transform: scale(1.05); /* Slight zoom on hover */
+            border: 1px solid var(--border-color);
+            background-color: var(--card-background);
+            box-shadow: 0 4px 6px var(--shadow-color);
         }
 
         .theme-switcher {
@@ -56,21 +51,16 @@
             cursor: pointer;
             z-index: 1000;
         }
-
-        /* 可能需要添加的背景纹理样式 */
-        body {
-            background-image: url('纹理图片的URL');
-            background-repeat: repeat;
-        }
     </style>
 </head>
-<body>
+<body data-theme="light">
+
+<img src="https://cdn-icons-png.flaticon.com/512/1160/1160441.png" class="theme-switcher" alt="Switch Theme" width="50" onclick="toggleTheme()">
 
 <div class="container mt-5">
     <div class="row">
-        <!-- GPT示例卡片 -->
         <div class="col-md-4">
-            <div class="card" onclick="window.location.href='该GPT的链接';">
+            <div class="card" onclick="window.open('该GPT的链接', '_blank');">
                 <img src="GPT图标的URL" class="card-img-top" alt="GPT名称">
                 <div class="card-body">
                     <h5 class="card-title">GPT名称</h5>
@@ -81,29 +71,23 @@
     </div>
 </div>
 
-<!-- 主题切换图标 -->
-<img src="切换主题图标的URL" class="theme-switcher" onclick="toggleTheme();" alt="Toggle Theme">
-
-<!-- 引入Bootstrap JS 和依赖 -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
     function toggleTheme() {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        document.documentElement.setAttribute('data-theme', currentTheme === 'light' ? 'dark' : 'light');
+        const currentTheme = document.body.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        document.body.setAttribute('data-theme', newTheme);
     }
 
-    // 自动匹配用户系统主题
-    const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (userPrefersDark) {
-        document.documentElement.setAttribute('data-theme', 'dark');
+    // 自动匹配系统主题
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    if (prefersDarkScheme.matches) {
+        document.body.setAttribute('data-theme', 'dark');
+    } else {
+        document.body.setAttribute('data-theme', 'light');
     }
-
-    // 监听系统主题变化
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-        document.documentElement.setAttribute('data-theme', event.matches ? 'dark' : 'light');
-    });
 </script>
 </body>
 </html>
