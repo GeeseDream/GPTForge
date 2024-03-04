@@ -4,7 +4,7 @@
 
 ## 配置说明
 
-https://raw.githubusercontent.com/GeeseDream/gpts/main/instructions.md
+https://raw.githubusercontent.com/GeeseDream/GPTForge/main/.instructions/instructions.md
 
 ## 仓库列表
 
