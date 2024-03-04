@@ -1,41 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GPTs Showcase</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        :root {
+            --light-bg-color: #f6f8fa;
+            --light-text-color: #24292e;
+            --light-border-color: #e1e4e8;
+            --light-shadow: rgba(0, 0, 0, 0.1);
+
+            --dark-bg-color: #0d1117;
+            --dark-text-color: #c9d1d9;
+            --dark-border-color: #30363d;
+            --dark-shadow: rgba(255, 255, 255, 0.1);
+        }
+
+        [data-theme="light"] {
+            --bg-color: var(--light-bg-color);
+            --text-color: var(--light-text-color);
+            --border-color: var(--light-border-color);
+            --shadow: var(--light-shadow);
+        }
+
+        [data-theme="dark"] {
+            --bg-color: var(--dark-bg-color);
+            --text-color: var(--dark-text-color);
+            --border-color: var(--dark-border-color);
+            --shadow: var(--dark-shadow);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .card {
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 5px var(--shadow);
+            cursor: pointer;
+            transition: transform 0.2s; /* Animation */
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+        }
+
+        .theme-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        /* 可能需要添加的背景纹理样式 */
+        body {
+            background-image: url('纹理图片的URL');
+            background-repeat: repeat;
+        }
+    </style>
 </head>
 <body>
-    <header class="text-center p-3">
-        <h1>GPTForge</h1>
-        <p>探索和了解我的GPT项目。</p>
-    </header>
 
-    <div class="container">
-        <div class="row">
-            <!-- GPT示例开始 -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="GPT图标的URL" class="card-img-top" alt="GPT名称">
-                    <div class="card-body">
-                        <h5 class="card-title">GPT名称</h5>
-                        <p class="card-text">简短的描述。</p>
-                        <a href="该GPT的链接" class="btn btn-primary">了解更多</a>
-                    </div>
+<div class="container mt-5">
+    <div class="row">
+        <!-- GPT示例卡片 -->
+        <div class="col-md-4">
+            <div class="card" onclick="window.location.href='该GPT的链接';">
+                <img src="GPT图标的URL" class="card-img-top" alt="GPT名称">
+                <div class="card-body">
+                    <h5 class="card-title">GPT名称</h5>
+                    <p class="card-text">简短的描述。</p>
                 </div>
             </div>
-            <!-- GPT示例结束 -->
-            <!-- 重复上面的结构以添加更多的GPTs -->
         </div>
     </div>
+</div>
 
-    <footer class="text-center p-3">
-        © 2024 GPTForge
-    </footer>
+<!-- 主题切换图标 -->
+<img src="切换主题图标的URL" class="theme-switcher" onclick="toggleTheme();" alt="Toggle Theme">
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- 引入Bootstrap JS 和依赖 -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function toggleTheme() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        document.documentElement.setAttribute('data-theme', currentTheme === 'light' ? 'dark' : 'light');
+    }
+
+    // 自动匹配用户系统主题
+    const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (userPrefersDark) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+
+    // 监听系统主题变化
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+        document.documentElement.setAttribute('data-theme', event.matches ? 'dark' : 'light');
+    });
+</script>
 </body>
 </html>
