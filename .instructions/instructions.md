@@ -10,7 +10,7 @@ https://raw.githubusercontent.com/GeeseDream/gpts/main/instructions.md
 
 - GTPs
   - 所有者: GeeseDream
-  - 仓库名: gpts
+  - 仓库名: GPTForge
 
 ## 操作说明
 
