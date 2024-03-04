@@ -4,90 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GPT Showcase</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        :root {
-            --border-color-light: #ddd;
-            --shadow-color-light: rgba(0,0,0,.1);
-            --card-background-light: #fff;
-            --text-color-light: #000;
-
-            --border-color-dark: #30363d;
-            --shadow-color-dark: rgba(255,255,255,.1);
-            --card-background-dark: #161b22;
-            --text-color-dark: #c9d1d9;
-        }
-
-        [data-theme="light"] {
-            --border-color: var(--border-color-light);
-            --shadow-color: var(--shadow-color-light);
-            --card-background: var(--card-background-light);
-            --text-color: var(--text-color-light);
-        }
-
-        [data-theme="dark"] {
-            --border-color: var(--border-color-dark);
-            --shadow-color: var(--shadow-color-dark);
-            --card-background: var(--card-background-dark);
-            --text-color: var(--text-color-dark);
-        }
-
         body {
-            color: var(--text-color);
-            background-color: var(--background-color);
+            font-family: Arial, sans-serif;
+            background-color: #f6f8fa;
+            color: #24292e;
+            padding: 20px;
+            margin: 0;
         }
-
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
         .card {
-            cursor: pointer;
-            border: 1px solid var(--border-color);
-            background-color: var(--card-background);
-            box-shadow: 0 4px 6px var(--shadow-color);
+            background-color: #ffffff;
+            border: 1px solid #d1d5da;
+            border-radius: 6px;
+            width: 300px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
-        .theme-switcher {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            cursor: pointer;
-            z-index: 1000;
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+        .card h3 {
+            color: #0366d6;
+        }
+        .card p {
+            color: #586069;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
         }
     </style>
 </head>
-<body data-theme="light">
+<body>
 
-<img src="https://cdn-icons-png.flaticon.com/512/1160/1160441.png" class="theme-switcher" alt="Switch Theme" width="50" onclick="toggleTheme()">
-
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card" onclick="window.open('该GPT的链接', '_blank');">
-                <img src="GPT图标的URL" class="card-img-top" alt="GPT名称">
-                <div class="card-body">
-                    <h5 class="card-title">GPT名称</h5>
-                    <p class="card-text">简短的描述。</p>
-                </div>
-            </div>
+    <h2>Welcome to My GPT Showcase</h2>
+    <div class="container">
+        <!-- Example Card for a GPT -->
+        <div class="card" onclick="window.open('GPT_LINK_HERE', '_blank')">
+            <img src="GPT_ICON_URL_HERE" alt="GPT Icon">
+            <h3>GPT Name Here</h3>
+            <p>GPT Description Here</p>
         </div>
+        <!-- Repeat the above block for each GPT -->
     </div>
-</div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-    function toggleTheme() {
-        const currentTheme = document.body.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        document.body.setAttribute('data-theme', newTheme);
-    }
-
-    // 自动匹配系统主题
-    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-    if (prefersDarkScheme.matches) {
-        document.body.setAttribute('data-theme', 'dark');
-    } else {
-        document.body.setAttribute('data-theme', 'light');
-    }
-</script>
 </body>
 </html>
