@@ -18,10 +18,11 @@ jobs:
       run: npm install -g create-react-app
 
     - name: Create React App
-      run: create-react-app ./
+      run: create-react-app GoForge
 
     - name: Push Scaffold to Repository
       run: |
+        cd GoForge
         git config --global user.name 'Your Name'
         git config --global user.email 'your.email@example.com'
         git add my-react-app/ # Add the React app files excluding node_modules
