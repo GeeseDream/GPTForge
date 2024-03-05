@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 
 const GPTModels = () => {
@@ -17,7 +16,7 @@ const GPTModels = () => {
       {models.length > 0 ? (
         <ul>
           {models.map(model => (
-            <li key={model.id}>
+            <li key={model.id} onClick={() => window.open(model.url, '_blank')} style={{cursor: 'pointer'}}>
               <h2>{model.name}</h2>
               <p>{model.description}</p>
               <ul>
@@ -29,7 +28,7 @@ const GPTModels = () => {
           ))}
         </ul>
       ) : (
-        <p>No models found.</p>
+          <p>No models found.</p>
       )}
     </div>
   );
