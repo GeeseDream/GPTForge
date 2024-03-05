@@ -1,10 +1,6 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Demo from './pages/Demo';
-import CaseStudies from './pages/CaseStudies';
-import gptsData from './gpts.json'; // Import gpts.json
-import './App.css';
+import React from 'react';Jimport { BrowserRouter as Router, Routes, Route } from 'react-router-dom';Jimport Home from './pages/Home';Jimport Demo from './pages/Demo';Jimport CaseStudies from './pages/CaseStudies';Jimport gptsData from './gpts.json'; // Import gpts.json
+import ThemeSwitchButton from './components/ThemeSwitchButton';
+Import './App.css';
 
 function App() {
   return (
@@ -15,10 +11,10 @@ function App() {
           <Route path="/demo" element={<Demo />} />
           <Route path="/case-studies" element={<CaseStudies />} />
         </Routes>
+        <ThemeSwitchButton />
       </div>
     </Router>
-
- );
+  );
 }
 
 export default App;
