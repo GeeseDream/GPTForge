@@ -41,3 +41,26 @@ ul {
 li {
   margin-bottom: 10px; /* Add space between list items */
 }
+
+/* Card styles */
+.model-card {
+  background-color: var(--card-background-color, #fff);
+  color: var(--text-color, #000);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.model-card:hover {
+  transform: scale(1.05);
+}
+
+/* Theme-specific styles */
+[data-theme="dark"] .model-card {
+  background-color: #333;
+  color: #fff;
+}
+
