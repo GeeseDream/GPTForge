@@ -1,9 +1,7 @@
 name: Setup React Scaffold
 
 on:
-  push:
-    branches:
-      - main  # 或者是你希望触发此工作流的分支
+  workflow_dispatch:
 
 jobs:
   setup_scaffold:
@@ -20,7 +18,7 @@ jobs:
       run: npm install -g create-react-app
 
     - name: Create React App
-      run: create-react-app my-react-app
+      run: create-react-app ./
 
     - name: Push Scaffold to Repository
       run: |
