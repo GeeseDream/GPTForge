@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "GPQorge",
+    "description": "A versatile GPT for code generation and automation.",
+    "features": ["Code generation", "Automation", "Customizable"]
+  },
+  {
+    "id": 2,
+    "name": "GPTDesign",
+    "description": "A creative GPT for design and art inspiration.",
+    "features": ["Design inspiration", "Art generation", "Creative prompts"]
+  }
+]
