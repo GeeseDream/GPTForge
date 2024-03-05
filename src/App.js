@@ -10,7 +10,7 @@ function App() {
     <Router basename="/GoForge">
       <div className="App">
         <Routes>
-          <Route path="/" element={<Home |} />
+          <Route path="/" element={<Home />} />
           <Route path="/demo" element={<Demo />} />
           <Route path="/case-studies" element={<CaseStudies />} />
         </Routes>
