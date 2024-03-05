@@ -11,7 +11,6 @@ const CaseStudies = () => {
         <p>Description of how a GPT model improved customer service, achieving higher satisfaction rates and efficiency.</p>
         <p>Challenges faced, solutions implemented, and the outcomes achieved.</p>
       </div>
-      <!-- Add more detailed case studies here -->
     </div>
   );
 };
