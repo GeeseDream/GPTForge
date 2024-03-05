@@ -1,0 +1,31 @@
+name: Setup React Scaffold
+
+on:
+  push:
+    branches:
+      - main  # 或者是你希望触发此工作流的分支
+
+jobs:
+  setup_scaffold:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14' # 选择你需要的Node.js版本
+
+    - name: Install Create React App globally
+      run: npm install -g create-react-app
+
+    - name: Create React App
+      run: create-react-app my-react-app
+
+    - name: Push Scaffold to Repository
+      run: |
+        git config --global user.name 'Your Name'
+        git config --global user.email 'your.email@example.com'
+        git add my-react-app/*
+        git commit -m "Initial React app scaffold by GitHub Actions"
+        git push
