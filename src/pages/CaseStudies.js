@@ -1,5 +1,5 @@
-
 import React from 'react';
+
 import '../App.css';
 
 const CaseStudies = () => {
@@ -7,12 +7,12 @@ const CaseStudies = () => {
     <div className="case-studies">
       <h1>Case Studies of GPT Models</h1>
       <p>Explore how GPT models are transforming industries with their capabilities.</p>
-      {/* Example case study */}
       <div className="case-study">
         <h2>Case Study 1: Enhancing Customer Service</h2>
-        <p>Description of how a GPT model improved customer service, including challenges, solutions, and outcomes.</p>
+        <p>Description of how a GPT model improved customer service, achieving higher satisfaction rates and efficiency.</p>
+        <p>Challenges faced, solutions implemented, and the outcomes achieved.</p>
       </div>
-      {/* Additional case studies can be added here */}
+      <!-- Add more detailed case studies here -->
     </div>
   );
 };
