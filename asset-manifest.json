@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/GoForge/static/css/main.f855e6bc.css",
+    "main.css": "/GoForge/static/css/main.05d4c8fd.css",
     "main.js": "/GoForge/static/js/main.04cdae09.js",
     "static/js/453.ad6eb26e.chunk.js": "/GoForge/static/js/453.ad6eb26e.chunk.js",
     "index.html": "/GoForge/index.html",
-    "main.f855e6bc.css.map": "/GoForge/static/css/main.f855e6bc.css.map",
+    "main.05d4c8fd.css.map": "/GoForge/static/css/main.05d4c8fd.css.map",
     "main.04cdae09.js.map": "/GoForge/static/js/main.04cdae09.js.map",
     "453.ad6eb26e.chunk.js.map": "/GoForge/static/js/453.ad6eb26e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
+    "static/css/main.05d4c8fd.css",
     "static/js/main.04cdae09.js"
   ]
 }
