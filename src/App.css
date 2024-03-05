@@ -59,8 +59,4 @@ li {
 }
 
 /* Theme-specific styles */
-[data-theme="dark"] .model-card {
-  background-color: #333;
-  color: #fff;
-}
-
+[data-theme="dark"] .m
