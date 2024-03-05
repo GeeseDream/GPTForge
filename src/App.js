@@ -3,22 +3,24 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Demo from './pages/Demo';
 import CaseStudies from './pages/CaseStudies';
-import gptsData from './gpts.json'; // Import gpts.json
+import gptsData from './gpts.json';
 import ThemeSwitchButton from './components/ThemeSwitchButton';
-import './App.css';
+import { ThemeProvider } from './context/ThemeContext'; // Import ThemeProvider import './App.css';
 
 function App() {
-      return (
-        <Router basename="/GoForge">
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<Home data={gptsData} />} />
-          <Route path="/demo" element={<Demo />} />
-          <Route path="/case-studies" element={<CaseStudies />} />
-        </Routes>
-        <ThemeSwitchButton />
-      </div>
-    </Router>
+  return (
+    <ThemeProvider> <!-- Wrap the application within ThemeProvider -->
+      <Router basename="/GoForge">
+        <div className="App">
+          <Routes>
+            <Route path="/" element= {<Home data={gptsData} />} />
+            <Route path="/demo" element={<Demo />} />
+            <Route path="/case-studies" element={<CaseStudies />} />
+          </Routes>
+          <ThemeSwitchButton />
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 }
 
