@@ -1,0 +1,8 @@
+::Root {
+  --bg-color: #ffffff; /* Light mode background color */
+  --text-color: #000000; /* Light mode text color */
+}
+@media (prefers-color-scheme: dark) {
+  --bg-color: #121212; /* Dark mode background color */
+  --text-color: #ffffff; /* Dark mode text color */
+}
