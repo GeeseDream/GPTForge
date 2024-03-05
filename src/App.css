@@ -59,4 +59,6 @@ li {
 }
 
 /* Theme-specific styles */
-[data-theme="dark"] .m
+[data-theme="dark"] .m{
+  color: white; /* Add missing styles here */
+}
