@@ -1,1 +1,25 @@
-import React from 'react';\nimport { BrowserRouter as Router, Routes, Route } from 'framer-motion';\nimport Home from './pages/Home';\nimport Demo from './pages/Demo';\nimport CaseStudies from './pages/CaseStudies';\nimport gptsData from './gpts.json'; // Import gpts.json\nimport ThemeSwitchButton from './components/ThemeSwitchButton';\nimport './App.css';\n\nfunction App() {\n  return (\n    <Router basename="/GoForge">\n      <div className="App">\n        <Routes>\n          <Route path="/" element={<Home data={gptsData} />} />\n          <Route path="/demo" element={<Demo />} />\n          <Route path="/case-studies" element={<CaseStudies />} />\n        </Routes>\n        <ThemeSwitchButton />\n      </div>\n    </Router>\n  );\n}\n\nexport default App;\n
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'framer-motion';
+import Home from './pages/Home';
+import Demo from './pages/Demo';
+import CaseStudies from './pages/CaseStudies';
+import gptsData from './gpts.json'; // Import gpts.json
+import ThemeSwitchButton from './components/ThemeSwitchButton';
+import './App.css';
+
+function App() {
+      return (
+        <Router basename="/GoForge">
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home data={gptsData} />} />
+          <Route path="/demo" element={<Demo />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
+        </Routes>
+        <ThemeSwitchButton />
+      </div>
+    </Router>
+  );
+}
+
+export default App;
