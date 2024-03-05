@@ -9,7 +9,7 @@ import { ThemeProvider } from './context/ThemeContext'; // Import ThemeProvider 
 
 function App() {
   return (
-    <ThemeProvider> <!-- Wrap the application within ThemeProvider -->
+    <ThemeProvider>
       <Router basename="/GoForge">
         <div className="App">
           <Routes>
