@@ -1,0 +1,1 @@
+import React from 'react';\r\nimport '../App.css';\r\n\r\nconst Home = () => (\r\n  <div className=\"home\">\r\n    <h1>Welcome to our GPT Website</h1>\r\n    <p>Explore the capabilities of GPT models and how they can transform your business or project.</p>\r\n  </div>\r\n);\r\n\r\nexport default Home;
