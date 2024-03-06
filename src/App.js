@@ -11,9 +11,10 @@ function App() {
             <Route path="/demo" element={<Demo />} />
             <Route path="/case-studies" element={<CaseStudies />} />
           </Routes>
-           {/* Add GitHub icon link */}
-          <a href=\"https://github.com/GeeseDream/GoForge\" target=\"_blank\" rel=\"noopener noreferrer\" style={{position: 'fixed', top: '10px', right: '10px'}}>\n            <i className=\"fab fa-github\" style={{fontSize: '24px'}}></i>\n          </a>
-        </div>
+          <ThemeSwitchButton />\n          <a href=\"https://github.com/GeeseDream/GoForge\" target=\"_blank fa fa-github\" style={{position: 'fixed', top: '10px', right: '10px' }}>\n          <i className=\"fab fa-github\" style={{fontSize: '24px'}}></i>\n          </a>\n        </div>
       </Router>
       </ThemeProvider>
-    );\n}\n\nexport default App;\n
+    );
+}
+
+export default App;
