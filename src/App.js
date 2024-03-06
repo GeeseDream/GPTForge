@@ -3,18 +3,16 @@ Import ThemeSwitchButton from './components/ThemeSwitchButton';Import { ThemePro
 Import './App.css';
 
 function App() {
-  // Removed useContext call from this top-level component
-
   return (
     <ThemeProvider>
       <Router basename="/GoForge">
-        <div className="App"> // Now the class name is defined in static form without context
+        <div className="App">
           <Routes>
             <Route path="/" element={<Home data={gptsData} />} />
             <Route path="/demo" element={<Demo />} />
             <Route path="/case-studies" element={<CaseStudies />} />
           </Routes>
-          <ThemeSwitchButton /> // This button will still change theme as it is a child of ThemeProvider
+          <ThemeSwitchButton />
         </div>
       </Router>
     </ThemeProvider>
@@ -22,4 +20,3 @@ function App() {
 }
 
 export default App;
-[
