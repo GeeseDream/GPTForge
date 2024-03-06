@@ -41,4 +41,40 @@ The `pages` directory contains components that represent different pages within 
 
 This structure overview reveals a React-based application structured around showcasing and interacting with GPT models. The modular structure supports clear separation and reuse of functionality, while context provides cross-component state management capabilities. Pages define the primary interaction points for users.
 
+
+## Dependencies and Business Logic
+
+### Dependencies
+1. **App.js**:
+   - Depends on **React** and **react-router-dom** for constructing a single page application's routing.
+   - Imports **Home**, **Demo**, and **CaseStudies** page components, defining the app's main routing paths.
+   - Uses **ThemeSwitchButton** component to allow theme mode switching (light/dark) by the user.
+   - Through **ThemeContext**, manages theme state and passes it down to children components that require it.
+
+2. **Components**:
+   - **AnimatedButton** provides an interactive button with animation effects.
+   - **ThemeSwitchButton** relies on **ThemeContext** to toggle and get the current theme.
+   - **GPTModels** and **GPTModelDetails** components are potentially used by the **Home** page to display information and details about GPT models.
+
+3. **Pages**:
+   - **Home**, **Demo**, and **CaseStudies** serve as the main page components routed by **App.js**.
+
+4. **CSS Files**:
+   - **App.css**, **index.css**, and **themes.css** provide global styles, theme styles, and specific component styles.
+
+### Business Logic
+- **Theme Switching**:
+  - The user can toggle between light and dark modes using the **ThemeSwitchButton**, which updates the state in **ThemeContext** affecting the global application of theme styles.
+
+- **Dynamic Content Display**:
+  - **GPTModels** component is responsible for asynchronously loading and displaying a list of GPT models, potentially fetching data from `gpts.json`.
+  - For each GPT model, detailed information can be displayed, possibly involving the use of the **GPTModelDetails** component.
+
+- **Responsive Design**:
+  - Styles in **App.css** and **index.css** ensure compatibility and user experience across different devices with media queries supporting different screen sizes.
+
+- **Animations and Interactivity**:
+  - **AnimatedButton** implements interactive animation effects for buttons using `framer-motion`, enhancing user interaction experience.
+"""
+
 Please use this document as a guide to update the README file on GitHub.
