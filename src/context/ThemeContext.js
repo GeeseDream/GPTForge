@@ -19,6 +19,12 @@ const ThemeProvider = ({ children }) => {
   useEffect(() => {
     localStorage.setItem('theme', theme);
   }, [theme]);
+  
+  useEffect(() => {
+    // Update the body's data-theme attribute to match the current theme
+    document.body.setAttribute('data-theme', theme);
+  }, [theme]);
+  
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
