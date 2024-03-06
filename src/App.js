@@ -1,12 +1,4 @@
-
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Demo from './pages/Demo';
-import CaseStudies from './pages/CaseStudies';
-import gptsData from './gpts.json';
-import ThemeSwitchButton from './components/ThemeSwitchButton';
-import { ThemeProvider } from './context/ThemeContext'; // Import ThemeProvider
+import React from 'react';\nimport { BrowserRouter as Router, Routes, Route } from 'react-router-dom';\nimport Home from './pages/Home';\nimport Demo from './pages/Demo';\nimport CaseStudies from './pages/CaseStudies';\nimport gptsData from './gpts.json';\nimport ThemeSwitchButton from './components/ThemeSwitchButton';\nimport { ThemeProvider } from './context/ThemeContext'; // Import ThemeProvider
 import './App.css';
 
 function App() {
@@ -19,15 +11,9 @@ function App() {
             <Route path="/demo" element={<Demo />} />
             <Route path="/case-studies" element={<CaseStudies />} />
           </Routes>
-          <ThemeSwitchButton />
-          <!-- Add GitHub icon link -->
-          <a href="https://github.com/GeeseDream/GoForge" target="_blank" rel="noopener noreferrer" style={{position: 'fixed', top: '10px', right: '10px' }}>
-            <i className="fab fa-github" style={{ fontSize: '24px' }}></i>
-          </a>
+           {/* Add GitHub icon link */}
+          <a href=\"https://github.com/GeeseDream/GoForge\" target=\"_blank\" rel=\"noopener noreferrer\" style={{position: 'fixed', top: '10px', right: '10px'}}>\n            <i className=\"fab fa-github\" style={{fontSize: '24px'}}></i>\n          </a>
         </div>
       </Router>
       </ThemeProvider>
-    );
-}
-
-export default App;
+    );\n}\n\nexport default App;\n
