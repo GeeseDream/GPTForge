@@ -1,17 +1,1 @@
-import React from 'react';
-import './GPTModels.css';
-
-const GPTModels = (props) => {
-    return (
-      <div className='gpt-models-container'>
-      {props.data.map(model => (
-          <div className="gpt-model-card" onClick={() => window.open(model.link, "_blank", "noreferrer,noopener")}>
-          <img src="your-icon-url-here" alt="Model Icon" style="width: 50px; height: 50px;"/><h1>{model.name}</h1>
-          <p>{model.description}</p>
-        </a>
-      ))}
-    </div>
-  );
-};
-
-export default GPTModels;
+import React from 'react';\nimport './GPTModels.css';\n\nconst GPTModels = (props) => {\n  return (\n    <div className='gpt-models-container'>\n    {props.data.map(model => (\n        <div className=\"gpt-model-card\" onClick={() => window.open(model.link, \"_blank\", \"noreferrer,noopener\")}>\n          <img src={model.icon} alt=\"Model Icon\" style={{width: '50px', height: '50px'}}/><h1>{model.name}</h1>\n          <p>{model.description}</p>\n        </div>\n    ))}\n    </div>\n  );\n};\n\nexport default GPTModels;
