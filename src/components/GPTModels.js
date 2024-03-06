@@ -1,1 +1,17 @@
-import React from 'react';\nimport './GPTModels.css';\n\nconst GPTModels = (props) => {\n  return (\n    <div className='gpt-models-container'>\n      {props.data.map(model => (\n        <a href={model.link} target=\"_blank\" className=\"gpt-model-card\">\n          <h1>{model.name}</h1>\n          <p>{model.description}</p>\n        </a>\n      ))}\n    </div>\n  );\n};\n\nexport default GPTModels;
+import React from 'react';
+import './GPTModels.css';
+
+const GPTModels = (props) => {
+    return (
+      <div className='gpt-models-container'>
+      {props.data.map(model => (
+          <a href={model.link} target="_blank" className="gpt-model-card">
+          <h1>{model.name}</h1>
+          <p>{model.description}</p>
+        </a>
+      ))}
+    </div>
+  );
+};
+
+export default GPTModels;
