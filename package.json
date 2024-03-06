@@ -28,10 +28,10 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "reaact-app/jest"
     ]
   },
-  "browserslist": {
+  "browserlist": {
     "production": [
       ">0.2%",
       "not dead",
