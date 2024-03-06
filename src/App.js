@@ -11,7 +11,7 @@ import './App.css';
 function App() {
     return (
       <ThemeProvider>
-      <Router basename="/">
+      <Router>
         <div className="App">
           <Routes>
             <Route path="/" element={<Home data={gptsData} />} />
