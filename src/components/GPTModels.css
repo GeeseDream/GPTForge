@@ -1,0 +1,14 @@
+.gpt-models-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.gpt-model-card {
+    background-color: #FFF;
+    border: 1px solid #CCC;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
