@@ -1,7 +1,8 @@
+
 [
   {
     "id": 1,
-    "name": "GPQorge",
+    "name": "GPTForge",
     "description": "A versatile GPT for code generation and automation.",
     "features": ["Code generation", "Automation", "Customizable"],
     "caseStudies": [
@@ -9,7 +10,9 @@
         "title": "Case Study 1: Enhancing Customer Service",
         "description": "Description of how a GPT model improved customer service, including challenges, solutions, and outcomes."
       }
-    ]
+    ],
+    "link": "https://example.com/model1",
+    "icon": "https://example.com/icon1.png"
   },
   {
     "id": 2,
@@ -21,6 +24,8 @@
         "title": "Case Study 2: Innovation in Design",
         "description": "Description of how GPT models have been used to invent new design concepts and improve artistic creativity."
       }
-    ]
+    ],
+    "link": "https://example.com/model2",
+    "icon": "https://example.com/icon2.png"
   }
 ]
