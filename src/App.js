@@ -1,27 +1,20 @@
-
-import React, { useContext } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Demo from './pages/Demo';
-import CaseStudies from './pages/CaseStudies';
-import gptsData from './gpts.json';
-import ThemeSwitchButton from './components/ThemeSwitchButton';
-import { ThemeContext, ThemeProvider } from './context/ThemeContext'; // Import ThemeContext
-import './App.css';
+import React from 'react';Jimport { BrowserRouter as Router, Routes, Route } from 'react-router-dom';Jimport Home from './pages/Home';Jimport Demo from './pages/Demo';Jimport CaseStudies from './pages/CaseStudies';Import gptsData from './gpts.json';
+Import ThemeSwitchButton from './components/ThemeSwitchButton';Import { ThemeProvider } from './context/ThemeContext'; // Import ThemeProvider
+Import './App.css';
 
 function App() {
-  const { theme } = useContext(ThemeContext); // Use ThemeContext to get the current theme
+  // Removed useContext call from this top-level component
 
   return (
     <ThemeProvider>
       <Router basename="/GoForge">
-        <div className={`App ${theme}`}> {/* Apply the theme class here */}
+        <div className="App"> // Now the class name is defined in static form without context
           <Routes>
             <Route path="/" element={<Home data={gptsData} />} />
             <Route path="/demo" element={<Demo />} />
             <Route path="/case-studies" element={<CaseStudies />} />
           </Routes>
-          <ThemeSwitchButton />
+          <ThemeSwitchButton /> // This button will still change theme as it is a child of ThemeProvider
         </div>
       </Router>
     </ThemeProvider>
@@ -29,3 +22,4 @@ function App() {
 }
 
 export default App;
+[
