@@ -19,7 +19,7 @@ function App() {
             <Route path="/case-studies" element={<CaseStudies />} />
           </Routes>
           <ThemeSwitchButton />
-          <a href="https://github.com/GeeseDream/GoForge" target="_blank" rel="noopener noreferrer" className="fa fa-github" style={{position: 'fixed', top: '10px', right: '10px' }}>
+          <a href="https://github.com/GeeseDream/GoForge" target="_blank" rel="noopener noreferrer" className="fab fa-github" style={{position: 'fixed', top: '10px', right: '10px'}}>
             <i className="fab fa-github" style={{fontSize: '24px'}}></i>
           </a>
         </div>
