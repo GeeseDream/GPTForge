@@ -5,7 +5,7 @@ import Demo from './pages/Demo';
 import CaseStudies from './pages/CaseStudies';
 import gptsData from './gpts.json';
 import ThemeSwitchButton from './components/ThemeSwitchButton';
-import { ThemeProvider } from './context/ThemeContext'; // Import ThemeProvider
+import { ThemeProvider } from './context/ThemeContext';
 import './App.css';
 
 function App() {
