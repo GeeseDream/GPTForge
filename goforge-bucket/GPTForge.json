@@ -1,0 +1,14 @@
+{
+    "id": 1,
+    "name": "GPTForge",
+    "description": "A versatile GPT for code generation and automation.",
+    "features": ["Code generation", "Automation", "Customizable"],
+    "caseStudies": [
+      {
+        "title": "Case Study 1: Enhancing Customer Service",
+        "description": "Description of how a GPT model improved customer service, including challenges, solutions, and outcomes."
+      }
+    ],
+    "link": "https://example.com/model1",
+    "icon": "https://example.com/icon1.png"
+}
