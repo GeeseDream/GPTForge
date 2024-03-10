@@ -45,7 +45,7 @@
     },
     {
         "file_path": "./src/pages/Home.jsx",
-        "file_content": "\nimport React from 'react';\nimport GPTModels from '../components/GPTModels';\nimport gptsData from '../gpts.json';\n\nconst Home = () => (\n  <div className=\"home\">\n    <h1>Welcome to GoForge</h1>\n    <p>Explore the capabilities of GPT models and how they can transform your project.</p>\n    <GPTModels data={gptsData} />\n  </div>\n);\n\nexport default Home;\n"
+        "file_content": "\nimport React from 'react';\nimport GPTModels from '../components/GPTModels';\n\nconst Home = ({ data }) => (\n  <div className=\"home\">\n    <h1>Welcome to GoForge</h1>\n    <p>Explore the capabilities of GPT models and how they can transform your project.</p>\n    <GPTModels data={data} />\n  </div>\n);\n\nexport default Home;\n"
     },
     {
         "file_path": "./src/pages/CaseStudies.jsx",
