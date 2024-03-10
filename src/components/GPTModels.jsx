@@ -8,7 +8,7 @@ const GPTModels = (props) => {
       {props.data.map(model => (
         <div className="gpt-model-card" onClick={() => window.open(model.link, "_blank", "noreferrer,noopener")}>
           <img src={model.icon} alt="Model Icon" style={{width: '50px', height: '50px'}}/>
-          <h1>{model.name}</h1>
+          <h1 style={{ fontSize: '18px' }}>{model.name}</h1>
           <p>{model.description}</p>
         </div>
       ))}
