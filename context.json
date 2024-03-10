@@ -1,86 +1,86 @@
 [
     {
-        "file_path": "./src\\App.css",
-        "file_content": "body {\n    margin: 0;\n    padding: 0;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, 'Helvetica Neue', 'Sans-Serif';\n    background: #f5f5f5;\n    color: #333;\n    line-height: 1.6;\n}\n\n.App {\n    text-align: center;\n    max-width: 600px;\n    margin: auto;\n    padding: 20px;\n}\n\n.gpt-models-container {\n    display: grid;\n    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));\n    gap: 20px;\n    justify-content: center;\n}\n\n.gpt-model-card {\n    background-color: #FFF;\n    border: 1px solid #CCC;\n    padding: 20px;\n    margin: 20px 0;\n    border-radius: 10px;\n    transition: all 0.3 ease-out;\n    box-shadow: 0 4px 8px rgba(0,0,0,0.1);\n}\n\n.gpt-model-card:hover {\n    transform: scale(1.1);\n    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);\n}\n"
-    },
-    {
-        "file_path": "./src\\App.jsx",
-        "file_content": "import React from 'react';\nimport { BrowserRouter as Router, Routes, Route } from 'react-router-dom';\nimport { FontAwesomeIcon } from '@fortawesome/react-fontawesome';\nimport { faGithub } from '@fortawesome/free-brands-svg-icons';\nimport Home from './pages/Home';\nimport Demo from './pages/Demo';\nimport CaseStudies from './pages/CaseStudies';\nimport gptsData from './gpts.json';\nimport ThemeSwitchButton from './components/ThemeSwitchButton';\nimport { ThemeProvider } from './context/ThemeContext';\nimport './App.css';\n\nfunction App() {\n    return (\n      <ThemeProvider>\n      <Router>\n        <div className=\"App\">\n          <Routes>\n            <Route path=\"/\" element={<Home data={gptsData} />} />\n            <Route path=\"/demo\" element={<Demo />} />\n            <Route path=\"/case-studies\" element={<CaseStudies />} />\n          </Routes>\n          <ThemeSwitchButton />\n          <FontAwesomeIcon icon={faGithub} />\n        </div>\n      </Router>\n      </ThemeProvider>\n    );\n}\n\nexport default App;\n"
-    },
-    {
-        "file_path": "./src\\App.test.jsx",
+        "file_path": "./src/App.test.jsx",
         "file_content": "import { render, screen } from '@testing-library/react';\nimport App from './App';\n\ntest('renders learn react link', () => {\n  render(<App />);\n  const linkElement = screen.getByText(/learn react/i);\n  expect(linkElement).toBeInTheDocument();\n});\n"
     },
     {
-        "file_path": "./src\\gpts.json",
+        "file_path": "./src/App.css",
+        "file_content": "body {\n    margin: 0;\n    padding: 0;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, 'Helvetica Neue', 'Sans-Serif';\n    background: #f5f5f5;\n    color: #333;\n    line-height: 1.6;\n}\n\n.App {\n    text-align: center;\n    max-width: 600px;\n    margin: auto;\n    padding: 20px;\n}\n\n.gpt-models-container {\n    display: grid;\n    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));\n    gap: 20px;\n    justify-content: center;\n}\n\n.gpt-model-card {\n    background-color: #FFF;\n    border: 1px solid #CCC;\n    padding: 20px;\n    margin: 20px 0;\n    border-radius: 10px;\n    transition: all 0.3 ease-out;\n    box-shadow: 0 4px 8px rgba(0,0,0,0.1);\n}\n\n.gpt-model-card:hover {\n    transform: scale(1.1);\n    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);\n}\n"
+    },
+    {
+        "file_path": "./src/App.jsx",
+        "file_content": "import React from 'react';\nimport { BrowserRouter as Router, Routes, Route } from 'react-router-dom';\nimport { FontAwesomeIcon } from '@fortawesome/react-fontawesome';\nimport { faGithub } from '@fortawesome/free-brands-svg-icons';\nimport Home from './pages/Home';\nimport Demo from './pages/Demo';\nimport CaseStudies from './pages/CaseStudies';\nimport gptsData from './gpts.json';\nimport ThemeSwitchButton from './components/ThemeSwitchButton';\nimport { ThemeProvider } from './context/ThemeContext';\nimport './App.css';\n\nfunction App() {\n    return (\n      <ThemeProvider>\n      <Router>\n        <div className=\"App\">\n          <Routes>\n            <Route path=\"/\" element={<Home data={gptsData} />} />\n            <Route path=\"/demo\" element={<Demo />} />\n            <Route path=\"/case-studies\" element={<CaseStudies />} />\n          </Routes>\n          <ThemeSwitchButton />\n          <FontAwesomeIcon icon={faGithub} />\n        </div>\n      </Router>\n      </ThemeProvider>\n    );\n}\n\nexport default App;\n"
+    },
+    {
+        "file_path": "./src/gpts.json",
         "file_content": "\n[\n  {\n    \"id\": 1,\n    \"name\": \"GPTForge\",\n    \"description\": \"A versatile GPT for code generation and automation.\",\n    \"features\": [\"Code generation\", \"Automation\", \"Customizable\"],\n    \"caseStudies\": [\n      {\n        \"title\": \"Case Study 1: Enhancing Customer Service\",\n        \"description\": \"Description of how a GPT model improved customer service, including challenges, solutions, and outcomes.\"\n      }\n    ],\n    \"link\": \"https://example.com/model1\",\n    \"icon\": \"https://example.com/icon1.png\"\n  },\n  {\n    \"id\": 2,\n    \"name\": \"GPTDesign\",\n    \"description\": \"A creative GPT for design and art inspiration.\",\n    \"features\": [\"Design inspiration\", \"Art generation\", \"Creative prompts\"],\n    \"caseStudies\": [\n      {\n        \"title\": \"Case Study 2: Innovation in Design\",\n        \"description\": \"Description of how GPT models have been used to invent new design concepts and improve artistic creativity.\"\n      }\n    ],\n    \"link\": \"https://example.com/model2\",\n    \"icon\": \"https://example.com/icon2.png\"\n  }\n]\n"
     },
     {
-        "file_path": "./src\\index.css",
-        "file_content": "body {\n  margin: 0;\n  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',\n    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',\n    sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',\n    monospace;\n}\n\n/* Global styles */\nbody[data-theme=\"dark\"] {\n  background-color: #121212;\n  color: #fff;\n}\n\nbody[data-theme=\"light\"] {\n  background-color: #fff;\n  color: #000;\n}\n\n/* Retain existing styles */\n"
-    },
-    {
-        "file_path": "./src\\index.jsx",
-        "file_content": "import React from 'react';\nimport ReactDOM from 'react-dom/client';\nimport './index.css';\nimport App from './App';\nimport reportWebVitals from './reportWebVitals';\n\nconst root = ReactDOM.createRoot(document.getElementById('root'));\nroot.render(\n  <React.StrictMode>\n    <App />\n  </React.StrictMode>\n);\n\n// If you want to start measuring performance in your app, pass a function\n// to log results (for example: reportWebVitals(console.log))\n// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals\nreportWebVitals();\n"
-    },
-    {
-        "file_path": "./src\\logo.svg",
-        "file_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 841.9 595.3\"><g fill=\"#61DAFB\"><path d=\"M666.3 296.5c0-32.5-40.7-63.3-103.1-82.4 14.4-63.6 8-114.2-20.2-130.4-6.5-3.8-14.1-5.6-22.4-5.6v22.3c4.6 0 8.3.9 11.4 2.6 13.6 7.8 19.5 37.5 14.9 75.7-1.1 9.4-2.9 19.3-5.1 29.4-19.6-4.8-41-8.5-63.5-10.9-13.5-18.5-27.5-35.3-41.6-50 32.6-30.3 63.2-46.9 84-46.9V78c-27.5 0-63.5 19.6-99.9 53.6-36.4-33.8-72.4-53.2-99.9-53.2v22.3c20.7 0 51.4 16.5 84 46.6-14 14.7-28 31.4-41.3 49.9-22.6 2.4-44 6.1-63.6 11-2.3-10-4-19.7-5.2-29-4.7-38.2 1.1-67.9 14.6-75.8 3-1.8 6.9-2.6 11.5-2.6V78.5c-8.4 0-16 1.8-22.6 5.6-28.1 16.2-34.4 66.7-19.9 130.1-62.2 19.2-102.7 49.9-102.7 82.3 0 32.5 40.7 63.3 103.1 82.4-14.4 63.6-8 114.2 20.2 130.4 6.5 3.8 14.1 5.6 22.5 5.6 27.5 0 63.5-19.6 99.9-53.6 36.4 33.8 72.4 53.2 99.9 53.2 8.4 0 16-1.8 22.6-5.6 28.1-16.2 34.4-66.7 19.9-130.1 62-19.1 102.5-49.9 102.5-82.3zm-130.2-66.7c-3.7 12.9-8.3 26.2-13.5 39.5-4.1-8-8.4-16-13.1-24-4.6-8-9.5-15.8-14.4-23.4 14.2 2.1 27.9 4.7 41 7.9zm-45.8 106.5c-7.8 13.5-15.8 26.3-24.1 38.2-14.9 1.3-30 2-45.2 2-15.1 0-30.2-.7-45-1.9-8.3-11.9-16.4-24.6-24.2-38-7.6-13.1-14.5-26.4-20.8-39.8 6.2-13.4 13.2-26.8 20.7-39.9 7.8-13.5 15.8-26.3 24.1-38.2 14.9-1.3 30-2 45.2-2 15.1 0 30.2.7 45 1.9 8.3 11.9 16.4 24.6 24.2 38 7.6 13.1 14.5 26.4 20.8 39.8-6.3 13.4-13.2 26.8-20.7 39.9zm32.3-13c5.4 13.4 10 26.8 13.8 39.8-13.1 3.2-26.9 5.9-41.2 8 4.9-7.7 9.8-15.6 14.4-23.7 4.6-8 8.9-16.1 13-24.1zM421.2 430c-9.3-9.6-18.6-20.3-27.8-32 9 .4 18.2.7 27.5.7 9.4 0 18.7-.2 27.8-.7-9 11.7-18.3 22.4-27.5 32zm-74.4-58.9c-14.2-2.1-27.9-4.7-41-7.9 3.7-12.9 8.3-26.2 13.5-39.5 4.1 8 8.4 16 13.1 24 4.7 8 9.5 15.8 14.4 23.4zM420.7 163c9.3 9.6 18.6 20.3 27.8 32-9-.4-18.2-.7-27.5-.7-9.4 0-18.7.2-27.8.7 9-11.7 18.3-22.4 27.5-32zm-74 58.9c-4.9 7.7-9.8 15.6-14.4 23.7-4.6 8-8.9 16-13 24-5.4-13.4-10-26.8-13.8-39.8 13.1-3.1 26.9-5.8 41.2-7.9zm-90.5 125.2c-35.4-15.1-58.3-34.9-58.3-50.6 0-15.7 22.9-35.6 58.3-50.6 8.6-3.7 18-7 27.7-10.1 5.7 19.6 13.2 40 22.5 60.9-9.2 20.8-16.6 41.1-22.2 60.6-9.9-3.1-19.3-6.5-28-10.2zM310 490c-13.6-7.8-19.5-37.5-14.9-75.7 1.1-9.4 2.9-19.3 5.1-29.4 19.6 4.8 41 8.5 63.5 10.9 13.5 18.5 27.5 35.3 41.6 50-32.6 30.3-63.2 46.9-84 46.9-4.5-.1-8.3-1-11.3-2.7zm237.2-76.2c4.7 38.2-1.1 67.9-14.6 75.8-3 1.8-6.9 2.6-11.5 2.6-20.7 0-51.4-16.5-84-46.6 14-14.7 28-31.4 41.3-49.9 22.6-2.4 44-6.1 63.6-11 2.3 10.1 4.1 19.8 5.2 29.1zm38.5-66.7c-8.6 3.7-18 7-27.7 10.1-5.7-19.6-13.2-40-22.5-60.9 9.2-20.8 16.6-41.1 22.2-60.6 9.9 3.1 19.3 6.5 28.1 10.2 35.4 15.1 58.3 34.9 58.3 50.6-.1 15.7-23 35.6-58.4 50.6zM320.8 78.4z\"/><circle cx=\"420.9\" cy=\"296.5\" r=\"45.7\"/><path d=\"M520.5 78.1z\"/></g></svg>"
-    },
-    {
-        "file_path": "./src\\reportWebVitals.jsx",
-        "file_content": "const reportWebVitals = onPerfEntry => {\n  if (onPerfEntry && onPerfEntry instanceof Function) {\n    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {\n      getCLS(onPerfEntry);\n      getFID(onPerfEntry);\n      getFCP(onPerfEntry);\n      getLCP(onPerfEntry);\n      getTTFB(onPerfEntry);\n    });\n  }\n};\n\nexport default reportWebVitals;\n"
-    },
-    {
-        "file_path": "./src\\setupTests.jsx",
+        "file_path": "./src/setupTests.jsx",
         "file_content": "// jest-dom adds custom jest matchers for asserting on DOM nodes.\n// allows you to do things like:\n// expect(element).toHaveTextContent(/react/i)\n// learn more: https://github.com/testing-library/jest-dom\nimport '@testing-library/jest-dom';\n"
     },
     {
-        "file_path": "./src\\themes.css",
+        "file_path": "./src/reportWebVitals.jsx",
+        "file_content": "const reportWebVitals = onPerfEntry => {\n  if (onPerfEntry && onPerfEntry instanceof Function) {\n    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {\n      getCLS(onPerfEntry);\n      getFID(onPerfEntry);\n      getFCP(onPerfEntry);\n      getLCP(onPerfEntry);\n      getTTFB(onPerfEntry);\n    });\n  }\n};\n\nexport default reportWebVitals;\n"
+    },
+    {
+        "file_path": "./src/themes.css",
         "file_content": "::Root {\n  --bg-color: #ffffff; /* Light mode background color */\n  --text-color: #000000; /* Light mode text color */\n}\n@media (prefers-color-scheme: dark) {\n  --bg-color: #121212; /* Dark mode background color */\n  --text-color: #ffffff; /* Dark mode text color */\n}\n"
     },
     {
-        "file_path": "./src\\components\\AnimatedButton.jsx",
-        "file_content": ""
+        "file_path": "./src/logo.svg",
+        "file_content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 841.9 595.3\"><g fill=\"#61DAFB\"><path d=\"M666.3 296.5c0-32.5-40.7-63.3-103.1-82.4 14.4-63.6 8-114.2-20.2-130.4-6.5-3.8-14.1-5.6-22.4-5.6v22.3c4.6 0 8.3.9 11.4 2.6 13.6 7.8 19.5 37.5 14.9 75.7-1.1 9.4-2.9 19.3-5.1 29.4-19.6-4.8-41-8.5-63.5-10.9-13.5-18.5-27.5-35.3-41.6-50 32.6-30.3 63.2-46.9 84-46.9V78c-27.5 0-63.5 19.6-99.9 53.6-36.4-33.8-72.4-53.2-99.9-53.2v22.3c20.7 0 51.4 16.5 84 46.6-14 14.7-28 31.4-41.3 49.9-22.6 2.4-44 6.1-63.6 11-2.3-10-4-19.7-5.2-29-4.7-38.2 1.1-67.9 14.6-75.8 3-1.8 6.9-2.6 11.5-2.6V78.5c-8.4 0-16 1.8-22.6 5.6-28.1 16.2-34.4 66.7-19.9 130.1-62.2 19.2-102.7 49.9-102.7 82.3 0 32.5 40.7 63.3 103.1 82.4-14.4 63.6-8 114.2 20.2 130.4 6.5 3.8 14.1 5.6 22.5 5.6 27.5 0 63.5-19.6 99.9-53.6 36.4 33.8 72.4 53.2 99.9 53.2 8.4 0 16-1.8 22.6-5.6 28.1-16.2 34.4-66.7 19.9-130.1 62-19.1 102.5-49.9 102.5-82.3zm-130.2-66.7c-3.7 12.9-8.3 26.2-13.5 39.5-4.1-8-8.4-16-13.1-24-4.6-8-9.5-15.8-14.4-23.4 14.2 2.1 27.9 4.7 41 7.9zm-45.8 106.5c-7.8 13.5-15.8 26.3-24.1 38.2-14.9 1.3-30 2-45.2 2-15.1 0-30.2-.7-45-1.9-8.3-11.9-16.4-24.6-24.2-38-7.6-13.1-14.5-26.4-20.8-39.8 6.2-13.4 13.2-26.8 20.7-39.9 7.8-13.5 15.8-26.3 24.1-38.2 14.9-1.3 30-2 45.2-2 15.1 0 30.2.7 45 1.9 8.3 11.9 16.4 24.6 24.2 38 7.6 13.1 14.5 26.4 20.8 39.8-6.3 13.4-13.2 26.8-20.7 39.9zm32.3-13c5.4 13.4 10 26.8 13.8 39.8-13.1 3.2-26.9 5.9-41.2 8 4.9-7.7 9.8-15.6 14.4-23.7 4.6-8 8.9-16.1 13-24.1zM421.2 430c-9.3-9.6-18.6-20.3-27.8-32 9 .4 18.2.7 27.5.7 9.4 0 18.7-.2 27.8-.7-9 11.7-18.3 22.4-27.5 32zm-74.4-58.9c-14.2-2.1-27.9-4.7-41-7.9 3.7-12.9 8.3-26.2 13.5-39.5 4.1 8 8.4 16 13.1 24 4.7 8 9.5 15.8 14.4 23.4zM420.7 163c9.3 9.6 18.6 20.3 27.8 32-9-.4-18.2-.7-27.5-.7-9.4 0-18.7.2-27.8.7 9-11.7 18.3-22.4 27.5-32zm-74 58.9c-4.9 7.7-9.8 15.6-14.4 23.7-4.6 8-8.9 16-13 24-5.4-13.4-10-26.8-13.8-39.8 13.1-3.1 26.9-5.8 41.2-7.9zm-90.5 125.2c-35.4-15.1-58.3-34.9-58.3-50.6 0-15.7 22.9-35.6 58.3-50.6 8.6-3.7 18-7 27.7-10.1 5.7 19.6 13.2 40 22.5 60.9-9.2 20.8-16.6 41.1-22.2 60.6-9.9-3.1-19.3-6.5-28-10.2zM310 490c-13.6-7.8-19.5-37.5-14.9-75.7 1.1-9.4 2.9-19.3 5.1-29.4 19.6 4.8 41 8.5 63.5 10.9 13.5 18.5 27.5 35.3 41.6 50-32.6 30.3-63.2 46.9-84 46.9-4.5-.1-8.3-1-11.3-2.7zm237.2-76.2c4.7 38.2-1.1 67.9-14.6 75.8-3 1.8-6.9 2.6-11.5 2.6-20.7 0-51.4-16.5-84-46.6 14-14.7 28-31.4 41.3-49.9 22.6-2.4 44-6.1 63.6-11 2.3 10.1 4.1 19.8 5.2 29.1zm38.5-66.7c-8.6 3.7-18 7-27.7 10.1-5.7-19.6-13.2-40-22.5-60.9 9.2-20.8 16.6-41.1 22.2-60.6 9.9 3.1 19.3 6.5 28.1 10.2 35.4 15.1 58.3 34.9 58.3 50.6-.1 15.7-23 35.6-58.4 50.6zM320.8 78.4z\"/><circle cx=\"420.9\" cy=\"296.5\" r=\"45.7\"/><path d=\"M520.5 78.1z\"/></g></svg>"
     },
     {
-        "file_path": "./src\\components\\GPTModelDetails.jsx",
-        "file_content": ""
+        "file_path": "./src/index.css",
+        "file_content": "body {\n  margin: 0;\n  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',\n    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',\n    sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',\n    monospace;\n}\n\n/* Global styles */\nbody[data-theme=\"dark\"] {\n  background-color: #121212;\n  color: #fff;\n}\n\nbody[data-theme=\"light\"] {\n  background-color: #fff;\n  color: #000;\n}\n\n/* Retain existing styles */\n"
     },
     {
-        "file_path": "./src\\components\\GPTModels.css",
-        "file_content": ".gpt-models-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    gap: 1rem;\n}\n\n.gpt-model-card {\n    background-color: #FFF;\n    border: 1px solid #CCC;\n    padding: 1rem;\n    border-radius: 0.5rem;\n}\n\n/* Dark mode styles */\n[data-theme='dark'] .gpt-model-card {\n    background-color: #333; /* Darker background for dark mode */\n    color: #fff; /* Lighter text for darkmode */\n    border-color: #777; /* Darker border for darkmode */\n}\n"
+        "file_path": "./src/index.jsx",
+        "file_content": "import React from 'react';\nimport ReactDOM from 'react-dom/client';\nimport './index.css';\nimport App from './App';\nimport reportWebVitals from './reportWebVitals';\n\nconst root = ReactDOM.createRoot(document.getElementById('root'));\nroot.render(\n  <React.StrictMode>\n    <App />\n  </React.StrictMode>\n);\n\n// If you want to start measuring performance in your app, pass a function\n// to log results (for example: reportWebVitals(console.log))\n// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals\nreportWebVitals();\n"
     },
     {
-        "file_path": "./src\\components\\GPTModels.jsx",
-        "file_content": "\nimport React from 'react';\nimport './GPTModels.css';\n\nconst GPTModels = (props) => {\n  return (\n    <div className='gpt-models-container'>\n      {props.data.map(model => (\n        <div className=\"gpt-model-card\" onClick={() => window.open(model.link, \"_blank\", \"noreferrer,noopener\")}>\n          <img src={model.icon} alt=\"Model Icon\" style={{width: '50px', height: '50px'}}/>\n          <h1>{model.name}</h1>\n          <p>{model.description}</p>\n        </div>\n      ))}\n    </div>\n  );\n};\n\nexport default GPTModels;\n"
-    },
-    {
-        "file_path": "./src\\components\\PageTransition.jsx",
-        "file_content": ""
-    },
-    {
-        "file_path": "./src\\components\\ThemeSwitchButton.css",
-        "file_content": "\n.theme-switch-button {\n  position: fixed; /* Fixed position */\n  top: 20px; /* 20 pixels from the top */\n  right: 20px; /* 20 pixels from the right */\n  background-color: transparent; /* Transparent background */\n  border: none; /* No border */\n  cursor: pointer; /* Pointer cursor on hover */\n  font-size: 24px; /* Size of the icon/text */\n}\n"
-    },
-    {
-        "file_path": "./src\\components\\ThemeSwitchButton.jsx",
-        "file_content": "\nimport React, { useContext } from 'react';\nimport { ThemeContext } from '../context/ThemeContext';\nimport './ThemeSwitchButton.css'; // Ensure to import CSS file\n\nconst ThemeSwitchButton = () => {\n  const { theme, setTheme } = useContext(ThemeContext);\n\n  const toggleTheme = () => {\n    setTheme(theme === 'light' ? 'dark' : 'light');\n  };\n\n  return (\n    <button className=\"theme-switch-button\" onClick={toggleTheme}>\n      🌓\n    </button>\n  );\n};\n\nexport default ThemeSwitchButton;\n"
-    },
-    {
-        "file_path": "./src\\context\\ThemeContext.jsx",
+        "file_path": "./src/context/ThemeContext.jsx",
         "file_content": "import React, { createContext, useContext, useState, useEffect } from 'react';\n\nconst ThemeContext = createContext();\n\nconst useTheme = () => useContext(ThemeContext);\n\nconst ThemeProvider = ({ children }) => {\n  const [theme, setTheme] = useState('light');\n\n  useEffect(() => {\n    // Get the user's theme preference from local storage, if it exists\n    const storedTheme = localStorage.getItem('theme');\n    // Set the theme to the stored theme or to the system preference if no stored theme exists\n    const preferredTheme = storedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');\n    setTheme(preferredTheme);\n  }, []);\n\n  // Save the user's theme preference to local storage\n  useEffect(() => {\n    localStorage.setItem('theme', theme);\n  }, [theme]);\n  \n  useEffect(() => {\n    // Update the body's data-theme attribute to match the current theme\n    document.body.setAttribute('data-theme', theme);\n  }, [theme]);\n  \n\n  return (\n    <ThemeContext.Provider value={{ theme, setTheme }}>\n      {children}\n    </ThemeContext.Provider>\n  );\n};\n\nexport { ThemeContext, useTheme, ThemeProvider };\n"
     },
     {
-        "file_path": "./src\\pages\\CaseStudies.jsx",
-        "file_content": "import React from 'react';\nimport '../App.css';\n\nconst CaseStudies = () => {\n  return (\n    <div className=\"case-studies\">\n      <h1>Case Studies of GPT Models</h1>\n      <p>Explore how GPT models are transforming industries with their capabilities.</p>\n      <div className=\"case-study\">\n        <h2>Case Study 1: Enhancing Customer Service</h2>\n        <p>Description of how a GPT model improved customer service, achieving higher satisfaction rates and efficiency.</p>\n        <p>Challenges faced, solutions implemented, and the outcomes achieved.</p>\n      </div>\n    </div>\n  );\n};\n\nexport default CaseStudies;"
-    },
-    {
-        "file_path": "./src\\pages\\Demo.jsx",
+        "file_path": "./src/pages/Demo.jsx",
         "file_content": "\nimport React, { useState } from 'react';\nimport '../App.css';\n\nconst Demo = () => {\n  const [input, setInput] = useState('');\n\n  const handleSubmit = (e) => {\n    e.preventDefault();\n    // ToDo: Implement the logic to send the input to the GPT model and display the results\n  };\n\n  return (\n    <div className=\"demo\">\n      <h1>GPT Demo Page</h1>\n      <form onSubmit={handleSubmit}>\n        <label>\n          Input your question:\n          <input type=\"text\" value={input} onChange={e => setInput(e.target.value)} />\n        </label>\n        <button type=\"submit\">Submit</button>\n      </form>\n    </div>\n  );\n};\n\nexport default Demo;\n"
     },
     {
-        "file_path": "./src\\pages\\Home.jsx",
+        "file_path": "./src/pages/Home.jsx",
         "file_content": "\nimport React from 'react';\nimport GPTModels from '../components/GPTModels';\nimport gptsData from '../gpts.json';\n\nconst Home = () => (\n  <div className=\"home\">\n    <h1>Welcome to GoForge</h1>\n    <p>Explore the capabilities of GPT models and how they can transform your project.</p>\n    <GPTModels data={gptsData} />\n  </div>\n);\n\nexport default Home;\n"
+    },
+    {
+        "file_path": "./src/pages/CaseStudies.jsx",
+        "file_content": "import React from 'react';\nimport '../App.css';\n\nconst CaseStudies = () => {\n  return (\n    <div className=\"case-studies\">\n      <h1>Case Studies of GPT Models</h1>\n      <p>Explore how GPT models are transforming industries with their capabilities.</p>\n      <div className=\"case-study\">\n        <h2>Case Study 1: Enhancing Customer Service</h2>\n        <p>Description of how a GPT model improved customer service, achieving higher satisfaction rates and efficiency.</p>\n        <p>Challenges faced, solutions implemented, and the outcomes achieved.</p>\n      </div>\n    </div>\n  );\n};\n\nexport default CaseStudies;"
+    },
+    {
+        "file_path": "./src/components/GPTModels.jsx",
+        "file_content": "\nimport React from 'react';\nimport './GPTModels.css';\n\nconst GPTModels = (props) => {\n  return (\n    <div className='gpt-models-container'>\n      {props.data.map(model => (\n        <div className=\"gpt-model-card\" onClick={() => window.open(model.link, \"_blank\", \"noreferrer,noopener\")}>\n          <img src={model.icon} alt=\"Model Icon\" style={{width: '50px', height: '50px'}}/>\n          <h1>{model.name}</h1>\n          <p>{model.description}</p>\n        </div>\n      ))}\n    </div>\n  );\n};\n\nexport default GPTModels;\n"
+    },
+    {
+        "file_path": "./src/components/GPTModels.css",
+        "file_content": ".gpt-models-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    gap: 1rem;\n}\n\n.gpt-model-card {\n    background-color: #FFF;\n    border: 1px solid #CCC;\n    padding: 1rem;\n    border-radius: 0.5rem;\n}\n\n/* Dark mode styles */\n[data-theme='dark'] .gpt-model-card {\n    background-color: #333; /* Darker background for dark mode */\n    color: #fff; /* Lighter text for darkmode */\n    border-color: #777; /* Darker border for darkmode */\n}\n"
+    },
+    {
+        "file_path": "./src/components/AnimatedButton.jsx",
+        "file_content": ""
+    },
+    {
+        "file_path": "./src/components/GPTModelDetails.jsx",
+        "file_content": ""
+    },
+    {
+        "file_path": "./src/components/ThemeSwitchButton.css",
+        "file_content": "\n.theme-switch-button {\n  position: fixed; /* Fixed position */\n  top: 20px; /* 20 pixels from the top */\n  right: 20px; /* 20 pixels from the right */\n  background-color: transparent; /* Transparent background */\n  border: none; /* No border */\n  cursor: pointer; /* Pointer cursor on hover */\n  font-size: 24px; /* Size of the icon/text */\n}\n"
+    },
+    {
+        "file_path": "./src/components/ThemeSwitchButton.jsx",
+        "file_content": "\nimport React, { useContext } from 'react';\nimport { ThemeContext } from '../context/ThemeContext';\nimport './ThemeSwitchButton.css'; // Ensure to import CSS file\n\nconst ThemeSwitchButton = () => {\n  const { theme, setTheme } = useContext(ThemeContext);\n\n  const toggleTheme = () => {\n    setTheme(theme === 'light' ? 'dark' : 'light');\n  };\n\n  return (\n    <button className=\"theme-switch-button\" onClick={toggleTheme}>\n      🌓\n    </button>\n  );\n};\n\nexport default ThemeSwitchButton;\n"
+    },
+    {
+        "file_path": "./src/components/PageTransition.jsx",
+        "file_content": ""
     }
 ]
